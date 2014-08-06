@@ -69,4 +69,11 @@ module Make(Channel:V1_LWT.CHANNEL) = struct
   let flush oc =
     (* NOOP since we flush in the normal writer functions above *)
     return ()
+
+  let get_request ic =
+    Channel.get_request ic
+
+  let set_request ic req =
+    Channel.set_request ic req
+
 end
