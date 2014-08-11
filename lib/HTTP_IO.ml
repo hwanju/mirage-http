@@ -76,4 +76,9 @@ module Make(Channel:V1_LWT.CHANNEL) = struct
   let set_request ic req =
     Channel.set_request ic req
 
+  let get_response oc =
+    Channel.get_response oc
+
+  let set_response oc res =
+    Channel.set_response oc res
 end
